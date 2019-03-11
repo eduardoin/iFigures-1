@@ -1,23 +1,41 @@
-<p><%= @figure.name %></p>
-<p><%= @figure.brand %></p>
-<p>
-  <%= @figure.user.email %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-5">
+      <div class="figure-carousel">
+        <%= render 'components/carousel' %>
+      </div>
+    </div>
+    <div class="info-column col-xs-12 col-md-6 col-lg-7">
+      <h1 class="page-title"><%= @figure.name %></h1>
+      <h2 class="figure-collection"><%= link_to @figure.brand, brand_path(@figure.brand) %></h2>
+      <p><strong>Owner: </strong><%= @figure.user.email %></p>
+      <p><%= @figure.description %></p>
 
-<p>
-  <% if current_user %>
-    <%= link_to "Delete figure", figure_path(@figure), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</p>
+      <% if current_user == @figure.user %>
 
-<p>
-  <% if current_user %>
-    <%= link_to 'Update figure', edit_figure_path(@figure) %>
-  <% end %>
-</p>
+        <div class="owner-box">
+          <div class="back-btn"><%= link_to 'Back to Figures', figures_path %></div>
+          <div class="buttons">
+            <div class="update-figure-btn  btn btn-default btn-lg"><%= link_to 'Update Figure', edit_figure_path(@figure) %></div>
+            <div class="delete-figure-btn btn btn-danger btn-lg"><%= link_to "Delete Figure", figure_path(@figure), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
+        </div>
 
-<p>
-  <%= link_to 'Back to figures', figures_path %>
-</p>
+      <% else %>
 
-<%= render "map", map_figures: @map_figures %>
+        <div class="money-box">
+          <div class="price"><span>US$ <%= @figure.price %></span></div>
+          <div class="buttons">
+            <div class="reserve-btn btn btn-default btn-lg"><%= link_to 'Reverve it' %></div>
+            <div class="buy-btn btn btn-primary btn-lg"><%= link_to 'Buy it now' %></div>
+          </div>
+        </div>
+
+      <% end %>
+
+      <p>Address: <%= @figure.address %></p>
+      <div class="figure-map" style="height: 400px; background-color: #ddd;"></div>
+    </div>
+
+  </div>
+</div>

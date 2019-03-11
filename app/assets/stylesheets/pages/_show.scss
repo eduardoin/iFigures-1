@@ -1,0 +1,57 @@
+.figure-carousel {
+  margin-top: 56px;
+  height: 500px;
+  background-color: #ddd;
+}
+.page-title {
+
+ }
+.figure-collection {
+  margin: -36px 0 40px 0;
+  font-size: 28px;
+  font-weight: 400;
+  text-shadow: none;
+}
+.money-box, .owner-box {
+  border-radius: 4px;
+  border: solid 1px #ddd;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.btn-lg {
+  font-size: 18px;
+}
+.reserve-btn, .update-figure-btn {
+  margin: 0 8px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.reserve-btn:hover, .update-figure-btn:hover {
+  background-color: transparent;
+  color: #ff001d;
+}
+.buy-btn, .btn-danger {
+  margin: 0 8px;
+  border-radius: 4px;
+}
+.buy-btn a, .btn-danger a {
+  color: white !important;
+}
+
+ @media (min-width: 992px) {
+  .info-column {
+    padding-left: 40px;
+  }
+}

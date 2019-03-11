@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="carousel js-carousel">
+    <div class="carousel__showcase">
+      <%= link_to(figure_path(@figure)) do %>
+      <img class="carousel__image js-showcase-image" src="<%= cl_image_path @figure.main_photo %>" alt="Action figure" />
+      <% end %>
+    </div><!-- /carousel__showcase -->
+
+    <div class="carousel__controls">
+      <a class="carousel__control carousel__control_right js-prev" href="javascript:;" title="Previous"><i class="fa fa-chevron-left"></i></a><!-- /carousel__control -->
+
+
+
+      <% @figure.pictures.each do |picture| %>
+
+
+      <ul class="carousel__item-container js-item-container">
+        <li class="carousel__item">
+          <a class="carousel__link js-carousel-link" href="javascript:;">
+            <img class="carousel__link js-carousel-link" src="<%= cl_image_path picture.photo%>" alt="Action figure" />
+          </a><!-- /carousel__link -->
+        </li><!-- /carousel__item -->
+
+
+       <% end %>
+
+      <a class="carousel__control carousel__control_right js-next" href="javascript:;" title="Next"><i class="fa fa-chevron-right"></i></a><!-- /carousel__control -->
+    </div><!-- /carousel__controls -->
+  </div><!-- /carousel -->
+</div><!-- /wrapper -->
