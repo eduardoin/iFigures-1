@@ -34,7 +34,9 @@
       <% end %>
 
       <p>Address: <%= @figure.address %></p>
-      <div class="figure-map" style="height: 400px; background-color: #ddd;"></div>
+      <div class="figure-map" style="height: 400px; background-color: #ddd;">
+        <%= render 'map', map_figures: @map_figures %>
+      </div>
     </div>
 
   </div>
