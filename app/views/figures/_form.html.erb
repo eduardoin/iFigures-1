@@ -1,5 +1,5 @@
 <%= simple_form_for @figure do |f| %>
- <% if @figure.errors.any? %>
+  <% if @figure.errors.any? %>
     <div class="errors-container">
       <ul>
         <% @figure.errors.full_messages.each do |message| %>
@@ -8,7 +8,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="container">
+  <div class="fields">
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
@@ -29,18 +29,22 @@
       <%= f.label :address %>
       <%= f.text_field :address, class: 'form-control' %>
     </div>
-
+  </div>
+  <div class="pictures-box">
     <div class="form-group">
       <div id="pictures">
-        <div class="links">
-          <%= link_to_add_association "Add a new photo", f, :pictures, class: 'btn btn-primary btn-xs', data: { association_insertion_node: '#pictures', association_insertion_method: :append }  %>
-        </div>
+
         <%= f.simple_fields_for :pictures do |picture| %>
           <%= render 'picture_fields', f: picture %>
         <% end %>
+
+        <div class="links">
+          <%= link_to_add_association "Add a new photo", f, :pictures, class: 'new-photo-btn btn btn-default btn-xs', data: { association_insertion_node: '#pictures', association_insertion_method: :prepend }  %>
+        </div>
+
       </div>
     </div>
-
-    <%= f.submit class: 'btn btn-primary' %>
   </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>

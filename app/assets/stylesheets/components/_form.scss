@@ -1,0 +1,48 @@
+.row-fix {
+  margin: 0 !important;
+}
+.fields {
+  margin-bottom: 48px;
+}
+.pictures-box {
+  border-radius: 4px;
+  border: solid 1px #ddd;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+.clearfix {
+  margin: 16px 0 24px 0;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 8px;
+}
+.clearfix:first-child {
+  margin: 0 0 24px 0;
+}
+.nested-fields {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+.figure_pictures_photo {
+  margin-bottom: 4px;
+}
+.form-control-file {
+  font-size: 16px;
+  margin: 0;
+}
+.form-check-label {
+  font-size: 16px;
+  margin-left: 8px;
+}
+.remove_fields {
+  position: relative;
+  bottom: 2px;
+  left: 24px;
+}
+.new-photo-btn {
+  background-color: transparent;
+  padding: 4px 12px;
+}
+.new-photo-btn:hover {
+  background-color: transparent;
+}
