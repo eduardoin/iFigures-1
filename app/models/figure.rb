@@ -1,4 +1,5 @@
 class Figure < ApplicationRecord
+  include PgSearch
   belongs_to :user
   has_many :pictures, inverse_of: :figure, dependent: :destroy
   accepts_nested_attributes_for :pictures,
@@ -8,6 +9,11 @@ class Figure < ApplicationRecord
   validates :name, :brand, :price, :address, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  pg_search_scope :search_by_name_and_brand,
+                  against: %i[name brand],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 
   def self.random_brands(count)
     pluck(:brand).uniq.sample(count).map do |brand_name|

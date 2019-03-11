@@ -6,7 +6,7 @@ class FiguresController < ApplicationController
     if params[:query].nil?
       @figures = Figure.all
     else
-      @figures = Figure.where("name ILIKE ?", "%#{@query}%")
+      @figures = Figure.search_by_name_and_brand(@query)
     end
   end
 
