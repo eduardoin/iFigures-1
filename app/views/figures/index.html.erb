@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="page-title">The iFigure Collection</h1>
+  <div class="row">
+    <% @figures.each do |figure| %>
+      <%= render "components/figure_card", figure: figure %>
+    <% end %>
+  </div>
+</div>

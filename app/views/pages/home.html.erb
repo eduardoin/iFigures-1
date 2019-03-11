@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'components/banner' %>
+<div class="container">
+  <h3 class="browse-txt">Browse through the most famous franchises' collections:</h3>
+<div class="row">
+  <% @brands.each do |brand| %>
+    <%= render 'components/brand_card', brand: brand %>
+  <% end %>
+</div>
+</div>

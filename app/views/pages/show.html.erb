@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row">
+    <% @figures.each do |figure| %>
+      <%= render "components/figure_card", figure: figure %>
+    <% end %>
+  </div>
+</div>

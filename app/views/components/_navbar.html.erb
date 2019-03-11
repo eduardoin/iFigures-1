@@ -1,0 +1,53 @@
+<div class="navbar-wagon navbar-fixed-top">
+
+  <!-- Logo -->
+  <a href="/" class="navbar-ifigures-brand">
+    <h1 id="i">i</h1><h1>Figures</h1>
+  </a>
+
+  <!-- Search Bar -->
+  <div class="navbar-collapse collapse justify-content-end">
+    <ul class="nav pull-right">
+      <form class="form-inline" action="/figures">
+        <input class="form-control" name="query" type="search" placeholder="Search" aria-label="Search" value="">
+        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </ul>
+  </div>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <% if user_signed_in? %>
+        <%# TODO: Remove inline styles %>
+        <div style="display: flex">
+          <%= link_to "Add new Figure", new_figure_path %>
+          <%# TODO: Remove inline styles %>
+          <div style="margin-left: 30px" class="dropdown">
+            <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="profile">Profile</a></li>
+              <li><a href="dashboard">Dashboard</a></li>
+              <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to('Sign in', new_user_session_path)  %>
+        <%= link_to('Sign up', new_user_registration_path)  %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+<!--   <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Host</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Messagese</a></li>
+      </ul>
+    </div>
+  </div>
+ -->
+</div>

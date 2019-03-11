@@ -1,0 +1,17 @@
+<div class="col-xs-6 col-sm-3">
+  <div class="thumbnail">
+    <%= link_to(figure_path(figure)) do %>
+     <img src='<%= cl_image_path figure.main_photo, :type => :upload,
+    :width => 300, :height => 400, :crop => :fill, :gravity => :face %>' alt="action figure">
+  <% end %>
+    <div class="caption">
+      <h2><%= link_to figure.name, figure_path(figure) %></h2>
+      <h3><%= figure.brand %></h3>
+
+      <p>Price <span class="badge"><%= figure.price %></span></p>
+    </div>
+  </div>
+</div>
+
+
+

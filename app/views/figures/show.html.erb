@@ -1,0 +1,23 @@
+<p><%= @figure.name %></p>
+<p><%= @figure.brand %></p>
+<p>
+  <%= @figure.user.email %>
+</p>
+
+<p>
+  <% if current_user %>
+    <%= link_to "Delete figure", figure_path(@figure), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</p>
+
+<p>
+  <% if current_user %>
+    <%= link_to 'Update figure', edit_figure_path(@figure) %>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to 'Back to figures', figures_path %>
+</p>
+
+<%= render "map", map_figures: @map_figures %>

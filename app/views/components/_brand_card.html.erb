@@ -1,0 +1,10 @@
+<div class="col-xs-12 col-sm-6 col-md-3" >
+  <%= link_to brand_path(brand.name), class: 'brand-card' do %>
+    <div class="img-brand" style="background-image: linear-gradient(rgba(0,0,0,0) 30%, rgba(0,0,0,0.6)), url('<%= cl_image_path(brand.random_picture) %>');">
+      <div class="brand-text">
+        <h2 class="brand-card-title"><%= brand.name %></h2>
+        <p class="brand-total"><%= brand.figures_count %> Action Figures</p>
+      </div>
+    </div>
+  <% end %>
+</div>

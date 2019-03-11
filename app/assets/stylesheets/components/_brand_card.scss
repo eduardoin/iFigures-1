@@ -1,0 +1,38 @@
+.brand-card {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 240px;
+  background: linear-gradient(to right,#ff8a00,#da1b60);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 32px;
+  transition: bottom 0.2s ease, box-shadow 0.2s ease;
+}
+.brand-card:hover {
+  bottom: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.img-brand {
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  align-items: flex-end;
+  height: 236px;
+  background-size: cover;
+  padding: 16px;
+}
+.brand-text {
+  color: white;
+}
+.brand-card-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 4px 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.brand-total {
+  margin: 0 0 4px 0;
+}
