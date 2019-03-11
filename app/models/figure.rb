@@ -5,7 +5,7 @@ class Figure < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: :all_blank
 
-  validates :name, :brand, :price, presence: true
+  validates :name, :brand, :price, :address, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
