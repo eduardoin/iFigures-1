@@ -1,7 +1,6 @@
 <div class="container">
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-
+  <div class="row">
+    <div class="new-form col xs-12 col-md-8">
       <%= simple_form_for @figure do |f| %>
         <% if @figure.errors.any? %>
           <div class="errors-container">
@@ -34,9 +33,7 @@
             <%= f.text_field :address, class: 'form-control' %>
           </div>
         </div>
-      </div>
-  </div>
-      <div class="col-md-8 col-md-offset-2">
+
         <div class="pictures-box">
           <div class="form-group">
             <div id="pictures">
@@ -55,5 +52,6 @@
 
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>
+    </div>
   </div>
 </div>
