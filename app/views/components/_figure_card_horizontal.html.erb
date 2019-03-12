@@ -1,0 +1,13 @@
+<div class="card-product">
+  <%= link_to(figure_path(figure)) do %>
+    <img src='<%= cl_image_path figure.main_photo, :type => :upload,
+    :width => 300, :height => 400, :crop => :fill, :gravity => :face %>' alt="action figure">
+  <% end %>
+  <div class="card-product-infos">
+      <h3><strong>Name: </strong><%= link_to figure.name, figure_path(figure) %></h3>
+      <h3><strong>Brand: </strong><%= figure.brand %></h3>
+      <h3><strong>Price:</strong> US$ <%= figure.price %></h3>
+  </div>
+</div>
+
+
