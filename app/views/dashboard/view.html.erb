@@ -4,17 +4,16 @@
 
 <section>
   <ul class="tabs">
-    <li class="active">Purchase</li>
-    <li>Sold</li>
+    <li class="active">My Action Figures</li>
+    <li>Purchased</li>
   </ul>
 
   <ul class="tab__content">
     <li class="active">
       <div class="content__wrapper">
-        <h2 class="text-color">Insert</h2>
-        <h2 class="text-color">Text</h2>
-
-
+       <% @figures.each do |figure| %>
+       <%= render 'components/figure_card', figure: figure%>
+       <% end %>
       </div>
     </li>
     <li>
