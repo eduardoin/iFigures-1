@@ -11,10 +11,9 @@
   <ul class="tab__content">
     <li class="active">
       <div class="content__wrapper">
-       <% @figures.each do |figure| %>
-
-        <%= render 'components/figure_card_horizontal', figure: figure%>
-       <% end %>
+        <% @figures.each do |figure| %>
+          <%= render 'components/figure_card_horizontal', figure: figure%>
+        <% end %>
       </div>
 
     </li>
