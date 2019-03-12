@@ -50,8 +50,29 @@
   color: white !important;
 }
 
- @media (min-width: 992px) {
+@media (min-width: 992px) {
   .info-column {
     padding-left: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .money-box, .owner-box {
+    border-radius: 0;
+    border: none;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  .money-box a, .owner-box a {
+    font-size: 16px;
+  }
+  .update-figure-btn, .delete-figure-btn {
+    margin: 0 0 0 8px;
+    padding: 8px 12px !important;
   }
 }

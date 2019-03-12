@@ -1,4 +1,5 @@
 <div class="container">
+  <h1 class="page-title">Our <strong><%= params[:name] %></strong> collection</h1>
   <div class="row">
     <% @figures.each do |figure| %>
       <%= render "components/figure_card", figure: figure %>
