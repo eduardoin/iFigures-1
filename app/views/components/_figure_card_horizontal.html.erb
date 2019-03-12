@@ -1,7 +1,7 @@
 <div class="card-product">
   <%= link_to(figure_path(figure)) do %>
     <img src='<%= cl_image_path figure.main_photo, :type => :upload,
-    :width => 300, :height => 400, :crop => :fill, :gravity => :face %>' alt="action figure">
+    :width => 400, :height => 400, :crop => :fill %>' alt="action figure">
   <% end %>
   <div class="card-product-infos">
       <h3 class="dash-figure-description">
@@ -11,5 +11,6 @@
       </h3>
   </div>
 </div>
+<br>
 
 
