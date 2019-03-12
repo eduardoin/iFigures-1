@@ -26,14 +26,14 @@
         <div class="money-box">
           <div class="price"><span>US$ <%= @figure.price %></span></div>
           <div class="buttons">
-            <div class="reserve-btn btn btn-default btn-lg"><%= link_to 'Reverve it' %></div>
+            <div class="reserve-btn btn btn-default btn-lg"><%= link_to 'Reserve it' %></div>
             <div class="buy-btn btn btn-primary btn-lg"><%= link_to 'Buy it now' %></div>
           </div>
         </div>
 
       <% end %>
 
-      <p>Address: <%= @figure.address %></p>
+      <p><strong>Address: </strong><%= @figure.address %></p>
       <div class="figure-map" style="height: 400px; background-color: #ddd;">
         <%= render 'map', map_figures: @map_figures %>
       </div>

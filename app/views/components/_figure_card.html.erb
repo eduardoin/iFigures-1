@@ -1,4 +1,4 @@
-<div class="col-xs-6 col-sm-3">
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
   <div class="thumbnail">
     <%= link_to(figure_path(figure)) do %>
      <img src='<%= cl_image_path figure.main_photo, :type => :upload,
@@ -8,7 +8,7 @@
       <h2><%= link_to figure.name, figure_path(figure) %></h2>
       <h3><%= figure.brand %></h3>
 
-      <p>Price <span class="badge"><%= figure.price %></span></p>
+      <p class="card price">US$ <%= figure.price %></p>
     </div>
   </div>
 </div>

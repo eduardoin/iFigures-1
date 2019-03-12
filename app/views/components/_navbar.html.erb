@@ -1,15 +1,18 @@
 <div class="navbar-wagon navbar-fixed-top">
 
   <!-- Logo -->
-  <a href="/" class="navbar-ifigures-brand">
-    <h1 id="i">i</h1><h1>Figures</h1>
-  </a>
+  <div class="logo">
+    <a href="/" class="navbar-ifigures-brand">
+      <img class="navbar-ifigures-logo" src="https://lh3.googleusercontent.com/5u3U2Rf5VnPVMG0wLK2xFqu-wawQFmnyA6Da3hhTY6wK4BslwqcQOwUj8RUVf-BX7Brq=s360" alt="iFigures'logo">
+      <h1>iFigures</h1>
+    </a>
+  </div>
 
   <!-- Search Bar -->
   <div class="navbar-collapse collapse justify-content-end">
     <ul class="nav pull-right">
       <form class="form-inline" action="/figures">
-        <input class="form-control" name="query" type="search" placeholder="Search" aria-label="Search" value="">
+        <input class="special form-control" name="query" type="search" placeholder="Search" aria-label="Search" value="">
         <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </ul>
@@ -32,8 +35,8 @@
           </div>
         </div>
       <% else %>
-        <%= link_to('Sign in', new_user_session_path)  %>
-        <%= link_to('Sign up', new_user_registration_path)  %>
+        <div class="sign-in"><%= link_to('Sign in', new_user_session_path) %></div>
+        <div class="sign-up"><%= link_to('Sign up', new_user_registration_path) %></div>
       <% end %>
     </div>
   </div>

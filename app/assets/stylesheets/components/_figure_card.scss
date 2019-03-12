@@ -1,18 +1,35 @@
 //background-color: red;
-.thumbnail{
-h2{
-  color: #C0061C;
-  font-size: 24px;
-  text-shadow: none;
+.thumbnail {
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 24px rgba(0,0,0,0);
+  transition: box-shadow 0.3s ease;
+  .caption {
+    padding: 8px;
+  }
+  h2{
+    margin: 4px 0 8px 0;
+    color: #C0061C;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: none;
+  }
+  h3{
+    margin: 0 0 16px 0;
+    font-size: 16px;
+  }
+  .card {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+  p {
+    margin: 0;
+  }
+  a{
+    color: #C0061C;
+  }
 }
-a{
-  color: #C0061C;
-}
-
-h3{
-  font-size: 20px;
-}
-span{
-  background-color: #C0061C;
-}
+.thumbnail:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
 }
