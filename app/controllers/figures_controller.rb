@@ -11,7 +11,7 @@ class FiguresController < ApplicationController
   end
 
   def show
-    @map_figures = Figure.where.not(latitude: nil, longitude: nil)
+    @map_figures = Figure.where(id: params[:id]).where.not(latitude: nil, longitude: nil)
 
     @markers = @map_figures.map do |map_figure|
       {
