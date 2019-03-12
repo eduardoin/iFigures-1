@@ -18,7 +18,7 @@
 
     </li>
     <li>
-      <div class="container">
+      <div class="content__wrapper">
         <% current_user.reservations.each do |reservation| %>
           <%= render 'components/figure_card_horizontal', figure: reservation.figure%>
         <% end %>
