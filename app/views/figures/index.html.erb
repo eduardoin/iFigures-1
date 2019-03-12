@@ -1,8 +1,14 @@
-<div class="container">
-  <h1 class="page-title">The iFigure Collection</h1>
-  <div class="row">
-    <% @figures.each do |figure| %>
-      <%= render "components/figure_card", figure: figure %>
-    <% end %>
+<% if @figures == [] %>
+  <div class="container">
+    <h3 class="page-title"><%= render "components/alert" %></h3>
   </div>
-</div>
+<% else %>
+  <div class="container">
+    <h1 class="page-title">The iFigure Collection</h1>
+    <div class="row">
+      <% @figures.each do |figure| %>
+        <%= render "components/figure_card", figure: figure %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
