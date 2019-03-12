@@ -30,6 +30,7 @@ class FiguresController < ApplicationController
     @figure = Figure.new(figure_params)
     @figure.user = current_user
     if @figure.save
+      flash[:notice] = 'Action Figure created successfully.'
       redirect_to figure_path(@figure)
     else
       render :new
@@ -42,6 +43,7 @@ class FiguresController < ApplicationController
 
   def update
     if @figure.update(figure_params)
+      flash[:notice] = 'Action Figure updated successfully.'
       redirect_to figure_path(@figure)
     else
       render :edit
@@ -50,6 +52,7 @@ class FiguresController < ApplicationController
 
   def destroy
     @figure.destroy
+    flash[:notice] = 'Action Figure deleted successfully.'
     redirect_to figures_path
   end
 
