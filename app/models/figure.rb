@@ -1,6 +1,7 @@
 class Figure < ApplicationRecord
   include PgSearch
   belongs_to :user
+  has_many :reservations
   has_many :pictures, inverse_of: :figure, dependent: :destroy
   accepts_nested_attributes_for :pictures,
                                 allow_destroy: true,
@@ -19,6 +20,10 @@ class Figure < ApplicationRecord
     pluck(:brand).uniq.sample(count).map do |brand_name|
       Brand.new(brand_name)
     end
+  end
+
+  def reserved?
+    reservations.where("'#{Date.today}' BETWEEN start_time AND end_time").present?
   end
 
   def main_photo
