@@ -27,7 +27,7 @@
           <div class="price"><span>US$ <%= @figure.price %></span></div>
           <div class="buttons">
             <% if @figure.reserved? %>
-              <div class="buy-btn btn btn-primary btn-lg"><%= link_to 'Buy it now' %></div>
+              <h5 style="color: red"><%= @figure.name %> is already reserved!</h5>
             <% else %>
               <div class="reserve-btn btn btn-default btn-lg">
                 <%= link_to 'Reserve it', figure_reservations_path(@figure), method: :post %>
